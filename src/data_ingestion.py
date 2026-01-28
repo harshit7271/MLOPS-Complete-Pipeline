@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 import logging
 
 
-# Ensure the "logs" directory exists
 log_dir = 'logs'
 os.makedirs(log_dir, exist_ok=True)
 
@@ -17,6 +16,7 @@ console_handler = logging.StreamHandler()
 console_handler.setLevel('DEBUG')
 
 log_file_path = os.path.join(log_dir, 'data_ingestion.log')
+
 file_handler = logging.FileHandler(log_file_path)
 file_handler.setLevel('DEBUG')
 
@@ -75,10 +75,8 @@ def save_data(train_data: pd.DataFrame, test_data: pd.DataFrame, data_path: str)
 
 def main():
     try:
-        params = load_params(params_path='params.yaml')
-        test_size = params['data_ingestion']['test_size']
-        # test_size = 0.2
-        data_path = 'https://raw.githubusercontent.com/vikashishere/Datasets/main/spam.csv'
+        test_size = 0.2
+        data_path = 'https://raw.githubusercontent.com/harshit7271/MLOOPs-Complete-Pipeline/refs/heads/main/experiments/spam.csv'
         df = load_data(data_url=data_path)
         final_df = preprocess_data(df)
         train_data, test_data = train_test_split(
