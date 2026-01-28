@@ -1,0 +1,3 @@
+2026-01-28 23:27:19,520 - data_ingestion - DEBUG - Data loaded from https://raw.githubusercontent.com/harshit7271/MLOOPs-Complete-Pipeline/refs/heads/main/experiments/spam.csv
+2026-01-28 23:27:19,528 - data_ingestion - DEBUG - Data preprocessing completed
+2026-01-28 23:27:19,552 - data_ingestion - DEBUG - Train and test data saved to ./data\raw
