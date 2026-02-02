@@ -19,7 +19,8 @@ file_handler = logging.FileHandler(log_file_path)
 file_handler.setLevel('DEBUG')
 
 formatter = logging.Formatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 console_handler.setFormatter(formatter)
 file_handler.setFormatter(formatter)
 
